@@ -28,32 +28,18 @@ $(document).ready(function () {
     }
 
     //購物車下拉選單判斷預購
-    $('select[data-name="size-selector"], select[name="color-selector').change(function (e) {
-        e.preventDefault();
-        var size = document.querySelector('select[data-name="size-selector"]').value;
-        var color = document.querySelector('select[name="color-selector"]').value;
-        let $element = $('<span>', {
-            text: '(預購)',
-            style: 'color: red;'
-        });
-        $('select[data-name="size-selector"]').parent().find('.cros-float-left').after($element);
-
-        if ((color == "天空藍" && size == "M") || (color == "櫻花粉" && size == "M") || (color == "櫻花粉" && size == "M/L") || (color == "海軍藍" && size == "M") || (color == "薰衣草紫" && size == "M") || (color == "寧靜灰" && size == "S") || (color == "異色黑" && size == "S") || (color == "異色黑" && size == "M/L")) {
-            console.log("預購")
-            $element = $('<span>', {
-                text: '(預購)',
-                style: 'color: red;'
-            });
-        } else {
-            $element = $('<span>', {
-                text: '(預購)',
-                style: 'color: red; display:none'
-            });
-        }
-
-    });
-
-
+    // $('select[data-name="size-selector"], select[name="color-selector').change(function (e) {
+    //     e.preventDefault();
+    // });
+    var size = document.querySelector('select[data-name="size-selector"]').value;
+    var color = document.querySelector('select[name="color-selector"]').value;
+    var $element = $('<span>', {text: '(預購)',style: 'color: red;'});
+    if ((color == "天空藍" && size == "M") || (color == "櫻花粉" && size == "M") || (color == "櫻花粉" && size == "M/L") || (color == "海軍藍" && size == "M") || (color == "薰衣草紫" && size == "M") || (color == "寧靜灰" && size == "S") || (color == "異色黑" && size == "S") || (color == "異色黑" && size == "M/L")) {
+        console.log("預購")
+        $('select[data-name="size-selector"]').parent().after($element);
+    } else {
+        $('.form-group > span').empty();
+    }
     // 天空藍：M
     // 櫻花粉：M、M / L
     // 海軍藍：M
