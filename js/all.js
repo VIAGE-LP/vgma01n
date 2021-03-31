@@ -5,36 +5,58 @@ $(document).ready(function () {
     });
     observer.observe();
     // 立即購買btn動態
-    $('.offerbtn, .offerbtn_m').click(function (e) { 
+    $('.offerbtn, .offerbtn_m').click(function (e) {
         e.preventDefault();
         $('html , body').animate({
             scrollTop: $('#size').offset().top,
-        },900);
+        }, 900);
     });
     // 立即訂購btn動態
-    $('.buybtn,a[href="#size"]').click(function (e) { 
+    $('.buybtn,a[href="#size"]').click(function (e) {
         e.preventDefault();
         $('html , body').animate({
             scrollTop: $('#size').offset().top,
-        },900);
+        }, 900);
     });
 
     //偵測sns line btn 手機版還是電腦版，連結不同
-    var vw=$(window).width();
+    var vw = $(window).width();
     if (vw <= 768) {
         $(".line_link").attr("href", "https://bit.ly/2YszXqD");
     } else {
         $(".line_link").attr("href", "https://line.me/R/ti/p/%40fhl1857j");
     }
-    
-    //週年慶活動辦法下拉選單
-    // $(".anniversary_2 img,.anniversary_2, .SP_anniversary_2 img,.SP_anniversary_2").hide();
-    // $('.anniversary_1, .SP_anniversary_1').click(function (e) { 
-    //     e.preventDefault();
-    //     $(".anniversary_2 img,.anniversary_2, .SP_anniversary_2 img,.SP_anniversary_2").attr("style","display:block;");
-    // });
-    // $('.anniversary_2, .SP_anniversary_2').click(function (e) { 
-    //     e.preventDefault();
-    //     $(".anniversary_2 img,.anniversary_2, .SP_anniversary_2 img,.SP_anniversary_2").hide();
-    // });
+
+    //購物車下拉選單判斷預購
+    $('select[data-name="size-selector"], select[name="color-selector').change(function (e) {
+        e.preventDefault();
+        var size = document.querySelector('select[data-name="size-selector"]').value;
+        var color = document.querySelector('select[name="color-selector"]').value;
+        let $element = $('<span>', {
+            text: '(預購)',
+            style: 'color: red;'
+        });
+        $('select[data-name="size-selector"]').parent().find('.cros-float-left').after($element);
+
+        if ((color == "天空藍" && size == "M") || (color == "櫻花粉" && size == "M") || (color == "櫻花粉" && size == "M/L") || (color == "海軍藍" && size == "M") || (color == "薰衣草紫" && size == "M") || (color == "寧靜灰" && size == "S") || (color == "異色黑" && size == "S") || (color == "異色黑" && size == "M/L")) {
+            $element = $('<span>', {
+                text: '(預購)',
+                style: 'color: red;'
+            });
+        } else {
+            $element = $('<span>', {
+                text: '(預購)',
+                style: 'color: red; display:none'
+            });
+        }
+
+    });
+
+
+    // 天空藍：M
+    // 櫻花粉：M、M / L
+    // 海軍藍：M
+    // 薰衣草紫：M
+    // 寧靜灰: S
+    // 異色黑: S、M / L
 });
