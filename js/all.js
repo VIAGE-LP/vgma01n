@@ -27,6 +27,10 @@ $(document).ready(function () {
         $(".line_link").attr("href", "https://line.me/R/ti/p/%40fhl1857j");
     }
 
+
+});
+
+$("#lp_form").ready(function () {
     //購物車下拉選單判斷預購
     $('select[data-name="size-selector"], select[name="color-selector').change(function (e) {
         e.preventDefault();
