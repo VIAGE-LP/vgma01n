@@ -33,8 +33,8 @@ $(document).ready(function () {
         var size_selector = document.querySelector('select[data-name="size-selector"]').value;
         var color_selector = document.querySelector('select[name="color-selector"]').value;
         var preorder_text = $('<span>', { text: '(預購)', style: 'color: red;' });
+        $('.form-group > span').empty();
         if ((color_selector == "天空藍" && size_selector == "M") || (color_selector == "櫻花粉" && size_selector == "M") || (color_selector == "櫻花粉" && size_selector == "M/L") || (color_selector == "海軍藍" && size_selector == "M") || (color_selector == "薰衣草紫" && size_selector == "M") || (color_selector == "寧靜灰" && size_selector == "S") || (color_selector == "異色黑" && size_selector == "S") || (color_selector == "異色黑" && size_selector == "M/L")) {
-            console.log("預購")
             $('select[data-name="size-selector"]').parent().after(preorder_text);
         } else {
             $('.form-group > span').empty();
