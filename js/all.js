@@ -39,6 +39,7 @@ $(document).ready(function () {
         $('select[data-name="size-selector"]').parent().find('.cros-float-left').after($element);
 
         if ((color == "天空藍" && size == "M") || (color == "櫻花粉" && size == "M") || (color == "櫻花粉" && size == "M/L") || (color == "海軍藍" && size == "M") || (color == "薰衣草紫" && size == "M") || (color == "寧靜灰" && size == "S") || (color == "異色黑" && size == "S") || (color == "異色黑" && size == "M/L")) {
+            console.log("預購")
             $element = $('<span>', {
                 text: '(預購)',
                 style: 'color: red;'
