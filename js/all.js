@@ -31,12 +31,12 @@ $(document).ready(function () {
     // $('select[data-name="size-selector"], select[name="color-selector').change(function (e) {
     //     e.preventDefault();
     // });
-    var size = document.querySelector('select[data-name="size-selector"]').value;
-    var color = document.querySelector('select[name="color-selector"]').value;
-    var $element = $('<span>', {text: '(預購)',style: 'color: red;'});
-    if ((color == "天空藍" && size == "M") || (color == "櫻花粉" && size == "M") || (color == "櫻花粉" && size == "M/L") || (color == "海軍藍" && size == "M") || (color == "薰衣草紫" && size == "M") || (color == "寧靜灰" && size == "S") || (color == "異色黑" && size == "S") || (color == "異色黑" && size == "M/L")) {
+    var size_selector = document.querySelector('select[data-name="size-selector"]').value;
+    var color_selector = document.querySelector('select[name="color-selector"]').value;
+    var preorder_text = $('<span>', {text: '(預購)',style: 'color: red;'});
+    if ((color_selector == "天空藍" && size_selector == "M") || (color_selector == "櫻花粉" && size_selector == "M") || (color_selector == "櫻花粉" && size_selector == "M/L") || (color_selector == "海軍藍" && size_selector == "M") || (color_selector == "薰衣草紫" && size_selector == "M") || (color_selector == "寧靜灰" && size_selector == "S") || (color_selector == "異色黑" && size_selector == "S") || (color_selector == "異色黑" && size_selector == "M/L")) {
         console.log("預購")
-        $('select[data-name="size-selector"]').parent().after($element);
+        $('select[data-name="size-selector"]').parent().after(preorder_text);
     } else {
         $('.form-group > span').empty();
     }
