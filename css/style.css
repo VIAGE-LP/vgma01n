@@ -40,7 +40,7 @@ html,body {
     width: 63%;
     display: block;
     right: 18%;
-    top: 35.5%;
+    top: 36%;
 }
 
 .SP .offerbox_m .offerbtn_m_2{
@@ -48,7 +48,7 @@ html,body {
     width: 63%;
     display: block;
     right: 18%;
-    bottom: 2.5%;
+    bottom: 2%;
 }
 
 .offerbtn:hover{
@@ -104,7 +104,7 @@ html,body {
         height: 21vh;
         overflow:auto;
     }
-    .modal#exampleModalLong{
+    .modal{
         top:60px;
     }
 }
