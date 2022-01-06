@@ -19,6 +19,64 @@ html,body {
     margin: 0 auto;
 }
 
+.video_02{
+    padding:2.5rem 0;
+}
+.video_02 img{
+    width:47%;
+    display: block;
+    margin:0  auto;
+    padding-bottom:1.5rem;
+}
+.video_02 video{
+    width:70%;
+    height:486;
+    display: block;
+    margin:0  auto;
+}
+
+@media screen and (max-width: 768px){
+    .video_02{
+        padding:1.5rem 0;
+    }
+    .video_02 img{
+        width:90%;
+        display: block;
+        margin:0  auto;
+        padding-bottom:1rem;
+    }
+    .video_02 video{
+        width:95%;
+        height:auto;
+        display: block;
+        margin:0  auto;
+    }
+}
+.photo_content{
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.photo_content.photo_bg{
+    width:100%;
+}
+#carouselSlides{
+    width: 35%;
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+}
+@media screen and (max-width: 768px){
+    .photo_content{
+        width: 100%;
+    }
+    #carouselSlides{
+        width: 35%;
+        left: 3%;
+        bottom: 3%;
+    }
+}
+
 .PC .offerbox{
     position: relative;
 }
@@ -27,7 +85,7 @@ html,body {
     position: absolute;
     width: 20%;
     display: block;
-    bottom: 8%;
+    bottom: 10%;
     right: 40%;
 }
 
@@ -40,7 +98,7 @@ html,body {
     width: 63%;
     display: block;
     right: 18%;
-    top: 36%;
+    top: 42%;
 }
 
 .SP .offerbox_m .offerbtn_m_2{
@@ -48,7 +106,7 @@ html,body {
     width: 63%;
     display: block;
     right: 18%;
-    bottom: 2%;
+    bottom: 2.5%;
 }
 
 .offerbtn:hover{
@@ -104,7 +162,7 @@ html,body {
         height: 21vh;
         overflow:auto;
     }
-    .modal{
+    .modal#exampleModalLong{
         top:60px;
     }
 }
