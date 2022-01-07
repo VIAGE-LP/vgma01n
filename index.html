@@ -63,7 +63,7 @@
     <!-- <link rel="stylesheet" href="css/main.css" /> -->
     <!-- <link rel="stylesheet" href="css/buybtn.css" type="text/css" media="all"> -->
     <!-- <link rel="stylesheet" href="css/nav.css" type="text/css" media="all"> -->
-    <!-- <link rel="stylesheet" href="css/modal.css"> -->
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -305,14 +305,18 @@
                     <div class="PC">
                         <img src="./img/01_alert.jpg" alt="" style="width:70%">
                         <img src="./img/21.jpg" style="width:70%" alt="">
+                        <label for="modal-trigger" class="modal-open-button"><img src="./img/modal.png"
+                            style="width:27.5%;"></label>
                     </div>
                     <div class="SP">
                         <img src="./img/SP/SP_01_alert.jpg" alt="">
                         <img src="./img/21.jpg" alt="">
+                        <label for="modal-trigger" class="modal-open-button"><img src="./img/SP/SP_modal.png"
+                            style="width:42.5%;"></label>
                     </div>
                 </div>
 
-                <section class="sns_btn mt-3">
+                <section class="sns_btn mt-2">
                     <div class="PC">
                         <a href="https://line.me/R/ti/p/%40fhl1857j" target="blank">
                             <img src="./img/line btn.png" alt="加入好友" style="width:55%">
@@ -331,6 +335,29 @@
                             <img src="img/gotop.png" title="">
                         </noscript>
                     </a>
+                </div>
+
+                <!-- 日本的Modal -->
+                <div class="modal-wrap" id="modal-wrap">
+                    <input id="modal-trigger" type="checkbox">
+                    <div class="modal-overlay">
+                        <label for="modal-trigger" class="modal-trigger"></label>
+                        <div class="modal-content-jp">
+                            <label for="modal-trigger" class="modal-close-button">✖️</label>
+                            <div id="guidecolumn" class="regularly__block">
+                                <dl>
+                                    <dt>＜換貨說明＞</dt>
+                                    <dd>本公司提供未拆封商品於收到貨七日內一次更換尺寸之服務。</dd>
+                                </dl>
+
+                                <dl>
+                                    <dt>＜退貨說明＞</dt>
+                                    <dd>本商品屬個人衛生用品，係屬消保法第十九條第一項所稱合理例外情事，個人衛生用品不適用於七天猶豫期之規定，恕不接受已拆封商品之退貨。且由於海外商品一旦下訂後即由日本HRC株式會社保留並配送，故無提供因''個人因素''之售出商品的退貨服務。<br>
+                                        ★退換貨規則依網頁內容為準，若您需要換貨服務、或有特殊狀況，仍須換/退貨全新未拆封商品，請與客服聯繫。</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
