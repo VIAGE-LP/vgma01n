@@ -24,16 +24,24 @@ $(document).ready(function () {
         $('#modal-wrap').css('position', 'absolute');
     });
 
+    // 日本的modal自動抓取月份最後一天
+    var lastDay = new Date('2022', '01', 0);
+    var month = lastDay.getMonth() + 1;
+    month = month < 10 ? '0' + month : month;
+    var day = lastDay.getDate(); 
+    day = day < 10 ? '0' + day : day; 
+    $('#lastday').text(`${month}/${day}`);
+
     //週年慶活動辦法下拉選單
-    // $(".anniversary_2,.SP_anniversary_2").hide();
-    // $('.anniversary_1, .SP_anniversary_1').click(function (e) {
-    //     e.preventDefault();
-    //     $(".anniversary_2,.SP_anniversary_2").toggle();;
-    // });
-    // $('.anniversary_2, .SP_anniversary_2').click(function (e) {
-    //     e.preventDefault();
-    //     $(".anniversary_2, .SP_anniversary_2").hide();
-    // });
+    $(".anniversary_2,.SP_anniversary_2").hide();
+    $('.anniversary_1, .SP_anniversary_1').click(function (e) {
+        e.preventDefault();
+        $(".anniversary_2,.SP_anniversary_2").toggle();;
+    });
+    $('.anniversary_2, .SP_anniversary_2').click(function (e) {
+        e.preventDefault();
+        $(".anniversary_2, .SP_anniversary_2").hide();
+    });
 
     // 影片在iOS自動播放
     var promise = document.querySelector('video').play();
